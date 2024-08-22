@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+    
+   <head>
+   <style>
+       
+      body {
+          width:100;
+          min-height:100vh;
+           background-color:rgb(240, 233, 225);
+       padding-left:8%;
+       padding-right:8%;
+       box-sizing:border-box;
+      }
+      h1{
+          color:#2b82ff;
+          font-size:25px;
+      }
+
+      .btn2 {
+  
+        padding: 10px 60px;
+    background:#eaeaf1;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-align: center;
+      }
+      .btn2:hover {
+      background:#ad7e9e;
+       transform:scale(1.08);
+      }
+     .btn2:focus{
+     background-color:rgb(104, 39, 124);
+      box-shadow:0 0 0 rgb(104, 39, 124);
+        transform: translateY(8px);
+         }
+      .form{
+        position: relative;
+      background:transparent;
+      background-color:#e7e3e3;
+            width:600px;
+          height:1600px;
+         left: 100px;  
+          border:2px solid rgb(255, 255, 255, .5);
+          border-radius:20px;
+           padding:20px 100px;
+         box-shadow:0 0 30px rgb(0,0,0,.5);
+         justify-content: center;
+    
+      }
+     
+      .input-box{
+          position:relative;
+          width:100%;
+          height:50px;
+        
+          margin:30px; 
+          
+      }
+
+      .input-box label{
+       
+          top:50%;
+          left:5px; 
+          font-size:20px;
+          font-family:'Times New Roman',Times,serif;
+          color:#162938;
+          font-weight:500;
+            pointer-events:none;
+      }
+      .popup{
+        width: 400px;
+        background: #e7e3e3;
+        border-radius: 6px;
+        position:absolute;
+         top:10px;
+        left: 50%;
+        transform: translate(200%,100%) scale(0.1);
+        text-align: center;
+        padding: 0 30px 30px;
+        color:#333;
+        visibility: hidden;  
+        display:none;
+        transition: transform 0.4s,top 0.4s;
+        border: solid;
+        border-color: gray;
+    }
+    .open-popup{
+      display: block;
+        visibility: visible;
+        top: 40px;
+        transform: translate(-50%,300%) scale(1);
+    }
+    
+    .popup h2{
+        font-size: 38px;
+        font-weight: 500;
+        margin: 30px 0 10px;
+    }
+    .popup  .ok-btn{
+        width: 80%;
+        margin-top: 50px;
+        padding:10px 0;
+        background: #5c3941;
+        border: 0;
+        outline: none;
+        font-size: 18px;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+        position: relative;
+        bottom:- 100px;
+        right: 15px;
+    
+    }
+
+   </style>    
+   </head>
+    
+    <body>
+       
+      <form>   
+     <div class="form">
+        <div class="header-logo"><img src="Studio_Project (4).png"alt="Blood Donation Form" width="100" class="header-logo-left"></div>
+        <h1  class="form-header">Blood Donation Form</h1>
+        <div class="form-subHeader">Confidential - Please answer the following questions correctly. This will help to protect you and the patient who&nbsp;receives your blood.&nbsp; </div>
+        <hr>
+         <div class="form-box">
+       
+    <div class="input-box">
+   
+           <div>
+           <label> • Name </label> 
+       <input type="text" required name="name">
+     
+     </div> <br>
+         <div>
+               <label> • Email </label> 
+       <input type="email" required name="email">
+        </div> <br> 
+        <div>
+              <label> • Age </label>   
+  <input type="number" required name="age">
+   
+       </div> <br>
+     
+       <div>
+       <label> • Weight </label> 
+      <input type ="number" required name="weight">
+       
+       </div> 
+          <div>
+            <br>
+               <label> • ID </label> 
+   <input type="number" required name="id">
+        </div>
+        <div>
+            <br>
+           <label >  • Gender</label> 
+           <input type ="radio"name ="gender" id="male"> <label for="male">male</label>
+           <input type ="radio"name ="gender" id="female"> <label for="female">female</label>
+        </div>
+     <div>
+         <br>
+     <label> • Affiliate governorate</label> 
+       <input type="text" required name="name">
+     
+     </div>
+       <div> <br>
+        <label> • Address </label> 
+       <input type="text"required name="address">
+    
+     </div>
+       <div>
+           <br>
+        <label> • Phone number </label> 
+   <input type="number" required name="phone">
+      
+     </div>
+     <div>
+         <br>
+            <label> • Blood type </label> 
+         <input list="blood"name="blood" required>
+         <datalist id="blood">
+          
+             <option value ="A+">
+             <option value ="A-">
+             <option value ="B+">
+             <option value ="B-">
+             <option value ="AB+">
+             <option value ="AB-">
+             <option value ="O+">
+             <option value ="O-"> 
+                        
+        </datalist>
+      
+     </div> <br>
+     <div>
+     <label> • Have you donated previously ?</label>
+       <input type ="radio"name ="answer" id="yes"> <label for="yes">Yes</label>
+           <input type ="radio"name ="answer" id="no"> <label for="no">No</label> 
+           </div> 
+           <div> <br>
+               <label>• Do you have any infectious or chronic disease ?</label>
+     <input type ="radio"name ="answAr" id="yaa"> <label for="yaa">Yes</label>
+    <input type ="radio"name ="answAr" id="never"> <label for="never">No</label>  
+           </div> 
+           <div> <br>
+      <label>• What was the last date you donated blood ?</label>  
+         <input type="date" name="date" placeholder="00/00/00"> 
+         </div> <br>
+         <div>
+         <label> • In the last six months have you had any of the following ?</label> <br> <br>
+        <input type ="checkbox" name=""> <label>Tattooing </label>
+           <input type ="checkbox" name=""> <label>Ear piercing </label>
+              <input type ="checkbox" name=""> <label>Dental extraction</label> </div> <br>
+           <div>
+               <label>• Are you taking or have you taken any of these in the past 72 hours ?</label>
+     <br> <input type="checkbox" name="72 hours"> <label>Antibiotics</label>
+     <input type="checkbox" name="72 hours"> <label> Steroids</label>
+          <input type="checkbox" name="72 hours"> <label>Aspirin </label>
+          <input type="checkbox" name="72 hours"> <label>Vaccinations </label>
+          <input type="checkbox" name="72 hours"> <label>Alcohol</label>
+          <input type="checkbox" name="72 hours"> <label>Dog bite Rabies vaccine (1 year)</label>
+           </div>
+            <div>
+                <label>• Is there any history of surgery or blood transfusion in the past six months?</label> <br>
+                   <input type="checkbox" name="history of surgery"> <label>Major </label>
+                         <input type="checkbox" name="history of surgery"> <label>Minor </label>
+                               <input type="checkbox" name="history of surgery"> <label> Blood transfusion</label>
+            </div>  <br>
+              <div>
+                <label >• Do you suffer from or have suffered from any of the following diseases?</label> <br>
+                   <input type="checkbox" name="diseases"> <label>Corona virus</label>
+                       <input type="checkbox" name="diseases"> <label>Heart disease </label><br>
+              <input type="checkbox" name="diseases"> <label> Cancer/Malignant Disease</label> <br>            
+                      <input type="checkbox" name="diseases"> <label>Diabetes </label> <br>    
+                     <input type="checkbox" name="diseases"> <label>Hepatitis B/C </label>   <br>   
+                     <input type="checkbox" name="diseases"> <label>Sexually Transmitted Diseases </label>  <br>    
+                    <input type="checkbox" name="diseases"> <label> Typhoid ( last on year) (Antay joro)</label>   <br>    
+                       <input type="checkbox" name="diseases"> <label> Lung Disease</label>  <br>
+
+                    <input type="checkbox" name="diseases"> <label> Tuberculosis</label>  <br>     
+                     <input type="checkbox" name="diseases"> <label> Allergic Disease</label>      <br>
+                   <input type="checkbox" name="diseases"> <label> Kidney Disease</label>   <br>     
+                       <input type="checkbox" name="diseases2"> <label> Epilepsy (Charay rog)</label>   <br>  
+                <input type="checkbox" name="diseases"> <label> abnormal Bleeding tendency.</label> <br>
+                <input type="checkbox" name="diseases"> <label> Jaundice (last one year).</label> <br>
+                <input type="checkbox" name="diseases"> <label> Malaria (six months)</label> <br>
+                <input type="checkbox" name="diseases"> <label> Fainting spells.</label> <br>
+             
+        <h1>If you are taking any medication you should consult your doctor before donating</h1>     
+             </div>
+            </form>
+           <div align="center"> <br> 
+      </div>
+      
+      <div align="center"> <br> 
+        <button type="submit"onclick="openPopup()" class="btn2"> <strong>send</strong> </button> 
+        <div class="popup" id="popup">
+           <img src="">
+            <h2>Thank You!</h2>
+            <p>you makes some ones life<br> we will contact you and send the location of the nearest cooberated hospital
+           or blood bank to your email</p>
+            <button type="button" class="ok-btn"><a href="homepage.html" style="color:white">OK!</a></button>
+            
+        </div>
+       </div>
+       <script>
+        function openPopup() {
+          event.preventDefault();
+          let form = document.querySelector("form");
+          let popup = document.getElementById("popup");
+          let requiredFields = form.querySelectorAll("[required]");
+          let isFilled = true;
+          for (let field of requiredFields) {
+            if (!field.value) {
+              isFilled = false;
+             alert("Please fill out all required fields.");
+              break;
+            }
+          }
+          if (isFilled) {
+            popup.classList.add("open-popup");
+            let okButton = document.querySelector(".ok-btn");
+            okButton.addEventListener("click", function() {
+              popup.classList.remove("open-popup");
+            });
+          }
+        }
+      </script>
+    </div>
+     </div>
+     </div>
+  
+ 
+     
+   
+       
+       
+       
+       
+    </body>
+    
+    
+  
+    
+    
+    
+</html>
+     
+     
+    

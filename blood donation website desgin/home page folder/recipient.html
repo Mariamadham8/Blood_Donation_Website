@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+    
+   <head>
+   <style>
+       
+      body {
+          width:100;
+          min-height:100vh;
+           background-color:rgb(240, 233, 225);
+       padding-left:8%;
+       padding-right:8%;
+       box-sizing:border-box;
+      }
+      .blood{
+        position: relative;
+      }
+      h1{
+          color:#2b82ff;
+          font-size:25px;
+      }
+
+      .btn2 {
+  
+    padding: 10px 60px;
+    background:#eaeaf1;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-align: center;
+      }
+      .btn2:hover {
+      background:#ad7e9e;
+       transform:scale(1.08);
+      }
+     .btn2:focus{
+     background-color:rgb(104, 39, 124);
+      box-shadow:0 0 0 rgb(104, 39, 124);
+        transform: translateY(8px);
+         }
+      .form{
+        position: relative;
+      background:transparent;
+      background-color:#e7e3e3;
+          width:600px;
+          height:1100px;
+         left: 100px;
+          border:2px solid rgb(255, 255, 255, .5);
+          border-radius:20px;
+           padding:20px 100px;
+         box-shadow:0 0 30px rgb(0,0,0,.5);
+         justify-content: center;
+    
+      }
+     
+      .input-box{
+          position:relative;
+          width:100%;
+          height:50px;
+        
+          margin:30px; 
+          
+      }
+
+      .input-box label{
+       
+          top:50%;
+          left:5px; 
+        trasform: translateY(-50%);
+       
+          font-size:20px;
+          font-family:'Times New Roman',Times,serif;
+          color:#162938;
+          font-weight:500;
+            pointer-events:none;
+      }
+      .popup{
+        width: 400px;
+        background: #e7e3e3;
+        border-radius: 6px;
+         position:absolute; 
+         top:10px;
+        left: 50%;
+        transform: translate(200%,100%) scale(0.1);
+        text-align: center;
+        padding: 0 30px 30px;
+        color:#333;
+         visibility: hidden;    
+        display:none; 
+        transition: transform 0.4s,top 0.4s;
+        border: solid;
+        border-color: gray;
+        
+    }
+    .open-popup{
+       visibility: visible; 
+        display: block;
+        top: 40px;
+        transform: translate(-50%,150%) scale(1);
+    }
+    
+    .popup h2{
+        font-size: 38px;
+        font-weight: 500;
+        margin: 30px 0 10px;
+    }
+    .popup  .ok-btn{ 
+        width: 80%;
+        margin-top: 50px;
+        padding:10px 0;
+        background: #5c3941;
+        border: 0;
+        outline: none;
+        font-size: 18px;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+        position: relative;
+        bottom:- 100px;
+        right: 15px;
+    
+    }
+
+   </style>    
+   </head>
+    
+    <body>
+       
+      <form>   
+     <div class="form">
+        <div class="header-logo"><img src="Studio_Project (4).png"alt="Blood Donation Form" width="100" class="header-logo-left"></div>
+        <h1  class="form-header">Blood Donation Form</h1>
+        <div class="form-subHeader">Confidential - Please answer the following questions correctly. This will help to protect you and the patient who&nbsp;receives your blood.&nbsp; </div>
+        <hr>
+         <div class="form-box">
+       
+    <div class="input-box">
+   
+           <div>
+           <label> • Name </label> 
+       <input type="text" required >
+     
+     </div> <br>
+         <div>
+               <label> • Email </label> 
+       <input type="email" required >
+        </div> <br> 
+        <div>
+              <label> • Age </label>   
+  <input type="text" required >
+   
+       </div> <br>
+     
+       <div>
+       <label> • Weight </label> 
+      <input type ="text" required>
+       </div> 
+          <div>
+            <br>
+               <label> • ID </label> 
+   <input type="text" required >
+        </div>
+        <div>
+            <br>
+           <label >  • Gender</label> 
+           <input type ="radio"name ="gender" id="male"> <label for="male">male</label>
+           <input type ="radio"name ="gender" id="female"> <label for="female">female</label>
+        </div>
+     <div>
+         <br>
+     <label> • Affiliate governorate</label> 
+       <input type="text" required>
+     
+     </div>
+       <div> <br>
+        <label> • Address </label> 
+       <input type="text"required>
+    
+     </div>
+       <div>
+           <br>
+        <label> • Phone number </label> 
+   <input type="text" required >
+      
+     </div>
+     <div>
+         <br>
+            <label> • Blood type </label> 
+         <input list="blood"name="blood" required>
+         <datalist id="blood">
+          
+             <option value ="A+">
+             <option value ="A-">
+             <option value ="B+">
+             <option value ="B-">
+             <option value ="AB+">
+             <option value ="AB-">
+             <option value ="O+">
+             <option value ="O-"> 
+                        
+        </datalist>
+      
+     </div> <br>
+          <label> • Blood Types Donation</label><br> 
+           <input type="radio" id="t" name="t" value="whole blood donation" ><label>Whole Blood Donation</label> <br>
+           <input type="radio" id="t" name="t" value="power red donation"><label>Power Red Donation</label> <br>
+           <input type="radio" id="t" name="t" value="platelet donation"><label>Platelet Donation</label> <br>
+           <input type="radio" id="t" name="t" value="plasma donation"><label>Plasma Donation</label><br><br>
+           <div>
+            <label> • Have you had a reaction to any transfusions in the past or not?</label> <br>
+              <input type ="radio"name ="answer" id="yes"> <label for="yes">Yes</label>
+                  <input type ="radio"name ="answer" id="no"> <label for="no">No</label> 
+                  </div><br> 
+              
+        <h1>During or after the procedure, if you feel any of the following, you should tell your doctor:
+            febrifuge
+            Shortness of breath
+            chills
+            Unusual itching
+            Chest or back pain
+            Feeling uncomfortable</h1>     
+           <div align="center"> <br> 
+      </div>
+      
+      <div align="center"> <br> 
+<button type="submit" onclick="openPopup()" class="btn2"><strong>submit</strong></button>
+<div class="error-message" id="error-message" style="display:none;">Please fill out all required fields.</div>
+</form> 
+<div class="popup" id="popup">
+  <h2>Thank You!</h2>
+  <p>May God cure you.<br>
+    As per your status, we will provide you with a donor as fast as possible. Your hospital will be updated with the details about the donor!</p>
+  <button type="button" class="ok-btn"><a href="homepage.html" style="color:white">OK!</a></button>
+</div>
+
+<script>
+  function openPopup() {
+    event.preventDefault();
+    let form = document.querySelector("form");
+    let popup = document.getElementById("popup");
+    let requiredFields = form.querySelectorAll("[required]");
+    let isFilled = true;
+    for (let field of requiredFields) {
+      if (!field.value) {
+        isFilled = false;
+        alert("Please fill out all required fields.");
+        break;
+      }
+    }
+    if (isFilled) {
+      popup.classList.add("open-popup");
+      let okButton = document.querySelector(".ok-btn");
+      okButton.addEventListener("click", function() {
+        popup.classList.remove("open-popup");
+      });
+    }
+  }
+</script>
+      
+    </div>
+     </div>
+     </div>
+  
+  
+ 
+     
+   
+       
+       
+       
+       
+    </body>
+    
+    
+  
+    
+    
+    
+</html>
+     
+     
+    
